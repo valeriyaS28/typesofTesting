@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Testing Todo list</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/assets/todo-list.js"></script>
+    <!--<link href="/assets/styles.css" rel="stylesheet" type="text/css" /> -->
+  </head>
+  <body>
+    <h1>Testing Checklist</h1>
+    <div id="tests-table">
+      <form method="POST">
+        <input id="a1" type="text" name="typeOfTest" placeholder="select type of test..." requiered />
+        <input id="a2" type="text" name="description" placeholder="add desctiption..." />
+        <button type="submit">Add new item</button>
+        <ul>
+          <% for (var i=0; i < todos.length; i++){ %>
+            <li>Type of Test: <%= todos[i].typeOfTest %> Description: <%= todos[i].description %> </li>
+          <% }; %>
+        </ul>
+      </form>
+  </body>
+
+</html>
